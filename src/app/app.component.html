@@ -1,0 +1,8 @@
+<input type ="text" [(ngModel)]="addname"/> 
+<div><button (click)="add()">Add</button></div>
+<button (click)="sort()">Sort</button>
+<ul>
+    @for(name of names; track $index){
+        <li>{{name}}<button (click)="remove($index)">Remove</button></li>
+    }
+</ul>
